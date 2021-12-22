@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
     <title>Wbpack Exercise</title>
-</head>
-<body>
-    <h1>Hello webpack!</h1>
-</body>
+  </head>
+  <body>
+    <div class="bg-stone-50 text-stone-600 container">
+      <header
+        class="bg-white border border-stone-200 shadow divide-y divide-stone-200"
+      >
+        <div
+          class="py-2 px-8 max-w-7xl mx-auto md:flex items-center justify-between space-x-4 space-y-4 md:space-y-0"
+        >
+          <div class="">
+            <a href="../index.html">
+              <img class="h-8 w-auto logoYummy" alt="Yummy Yums" />
+            </a>
+          </div>
+
+          <form id="submit">
+            <div class="relative text-gray-600 focus-within:text-gray-400">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                <button
+                  type="submit"
+                  class="p-1 focus:outline-none focus:shadow-outline"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </button>
+              </span>
+              <input
+                type="search"
+                id="search"
+                class="w-full md:w-96 py-2 text-sm text-gray-900 rounded-xl pl-10 focus:outline-none focus:bg-white focus:text-gray-900 border-2"
+                placeholder="Find a recipe"
+                autocomplete="off"
+              />
+            </div>
+          </form>
+
+          <div class="grid grid-cols-2 divide-x font-bold w-auto text-sm">
+            <a href="#" class="px-3">Create Account</a>
+            <a href="#" class="px-3">Login</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div id="result-heading"></div>
+        <div id="meals" class="meals">
+        </div>
+        <div id="single-meal"></div>
+      </main>
+
+      <footer class="py-16 bg-white border-t border-stone-200">
+        <div class="px-8 max-w-7xl mx-auto">
+          <div class="grid grid-cols-3">
+            <div class="text-center">
+              <h2 class="text-sm font-bold text-stone-900">Company</h2>
+              <nav class="mt-6 grid gap-6 text-sm">
+                <a href="#">Join our Newsletter</a>
+                <a href="#">Advertise</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+              </nav>
+            </div>
+            <div class="text-center">
+              <h2 class="text-sm font-bold text-stone-900">Social</h2>
+              <nav class="mt-6 grid gap-6 text-sm">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+              </nav>
+            </div>
+            <div class="text-center">
+              <h2 class="text-sm font-bold text-stone-900">Contact</h2>
+              <nav class="mt-6 grid gap-6 text-sm">
+                <a href="#">Email</a>
+                <a href="#">Phone</a>
+                <a href="#">Address</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
