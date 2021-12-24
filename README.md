@@ -16,9 +16,12 @@ Additional description about the project and its features.
 - Stylelint, Web Hint, Lighthouse
 - Eslint, Prettier
 
+## Video Demo
+
+[Video Demo](https://www.loom.com/share/65a6d8791efa4f06a6dba4cb9848e4b2)
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://recipeappmicroverse.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running, follow the steps in Setup below.
