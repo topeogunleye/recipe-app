@@ -4,7 +4,7 @@ describe('Check Items count number', () => {
   test('check if the function actually does the count', async () => {
     const data = await commentsCounter(52795);
     const count = data.length;
-    expect(count).toEqual(5);
+    expect(count).toEqual(7);
   });
 
   test(' check if the function has length', async () => {
