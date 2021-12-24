@@ -18,7 +18,7 @@ Additional description about the project and its features.
 
 ## Video Demo
 
-[Video Demo](https://www.loom.com/share/65a6d8791efa4f06a6dba4cb9848e4b2)
+[Video Demo](https://www.loom.com/share/86a73ca9798443a2af325321d206d7ab)
 ## Live Demo
 
 [Live Demo Link](https://recipeappmicroverse.netlify.app/)
