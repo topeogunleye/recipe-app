@@ -63,7 +63,12 @@ git clone https://github.com/topeogunleye/recipe-app.git
    ```sh
    npm run build
    ```
+4. ## 🚀 Testing Application
 
+1. Test the items Counter and Comments Counter function
+
+   ```sh
+   npm test
 ### Install
 
 The following tools help make easier to work with sample code.

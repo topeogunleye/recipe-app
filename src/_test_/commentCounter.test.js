@@ -1,26 +1,10 @@
-import commentsCounter from '../_mock_/commentsCounter.js';
+import CommentsCounter from '../_mock_/commentsCounter.js';
 
 describe('Check Items count number', () => {
-  test('check if the function actually does the count', async () => {
-    const data = await commentsCounter(52795);
-    const count = data.length;
-    expect(count).toEqual(7);
-  });
+  test('return the length of array', () => {
+    const comments = ['comment1', 'comment2', 'comment3', 'comment4', 'comment5', 'comment6', 'comment7', 'comment8'];
 
-  test(' check if the function has length', async () => {
-    const data = await commentsCounter(52795);
-    const count = data.length;
-    expect(count === data.length).toBe(true);
-  });
-
-  test('check if the length is of number type', async () => {
-    const data = await commentsCounter(52795);
-    const count = data.length;
-    expect(typeof count).toEqual('number');
-  });
-
-  test('check if the return data is an object', async () => {
-    const data = await commentsCounter(52795);
-    expect(typeof data).toEqual('object');
+    const commentCounter = new CommentsCounter(comments);
+    expect(commentCounter.getLength()).toEqual(8);
   });
 });

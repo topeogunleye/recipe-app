@@ -1,6 +1,5 @@
 /* Main Styling */
 main {
-  /* max-width: 800px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +14,6 @@ main {
 
 .meals {
   display: grid;
-
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.25rem /* 20px */;
   margin-top: 1.25rem; /* 20px */

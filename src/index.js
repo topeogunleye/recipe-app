@@ -2,8 +2,6 @@ import './base.css';
 import './style.css';
 import logo from './yummly.svg';
 import { getLike } from './apis/likes.js';
-import addComment from './events/addComment.js';
-import likes from './events/likeItem.js';
 import { defaultFood, searchFood } from './apis/food.js';
 import template from './template.js';
 import defaultTemplate from './defaultTemplate.js';
@@ -64,6 +62,4 @@ recipeCloseBtn.addEventListener('click', () => {
   modal.parentElement.classList.remove('showRecipe');
 });
 
-addComment();
-likes();
 getLike();
