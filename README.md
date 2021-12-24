@@ -6,7 +6,7 @@ A meal finder app that pulls from TheMealDB API to allow users to search for, vi
 
 > A meal finder app that pulls from TheMealDB API to allow users to search for, view recipes, and comment on recipes.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./sec.png)
 
 Additional description about the project and its features.
 

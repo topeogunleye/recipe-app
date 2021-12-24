@@ -301,7 +301,6 @@ Remove the inner padding in Chrome and Safari on macOS.
   /* 2 */
 }
 
-
 /*
 Use the modern Firefox focus style for all focusable elements.
 */
@@ -309,7 +308,6 @@ Use the modern Firefox focus style for all focusable elements.
 :-moz-focusring {
   outline: auto;
 }
-
 
 /*
 Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
@@ -327,7 +325,6 @@ progress {
   vertical-align: baseline;
 }
 
-
 /*
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
@@ -341,8 +338,6 @@ progress {
 
   /* 2 */
 }
-
-
 
 /*
 Add the correct display in Chrome and Safari.
