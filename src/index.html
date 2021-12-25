@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <title>Recipa | app</title>
+  </head>
+  <body>
+    <div class="bg-stone-50 text-stone-600 container">
+      <header
+        class="bg-white border border-stone-200 shadow divide-y divide-stone-200"
+      >
+        <div
+          class="py-2 px-8 max-w-7xl mx-auto md:flex items-center justify-between space-x-4 space-y-4 md:space-y-0"
+        >
+          <div class="">
+            <a href="../index.html">
+              <img
+                class="h-8 w-auto logoYummy"
+                src="./yummly.svg"
+                alt="Yummy Yums"
+              />
+            </a>
+          </div>
+
+          <div id="meals-counter"></div>
+
+          <form id="submit">
+            <div class="relative text-gray-600 focus-within:text-gray-400">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                <button
+                  type="submit"
+                  class="p-1 focus:outline-none focus:shadow-outline"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </button>
+              </span>
+              <input
+                type="search"
+                id="search"
+                class="w-full md:w-96 py-2 text-sm text-gray-900 rounded-xl pl-10 focus:outline-none focus:bg-white focus:text-gray-900 border-2"
+                placeholder="Find a recipe"
+                autocomplete="off"
+                value=""
+              />
+            </div>
+          </form>
+
+          <div class="grid grid-cols-2 divide-x font-bold w-auto text-sm">
+            <a href="#" class="px-3">Create Account</a>
+            <a href="#" class="px-3">Login</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div id="result-heading"></div>
+        <div id="meals" class="meals"></div>
+        <div id="single-meal"></div>
+
+        <div class="meal-details">
+          <!-- recipe close btn -->
+          <button
+            type="button"
+            class="btn recipe-close-btn"
+            id="recipe-close-btn"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+
+          <div class="meal-details-content"></div>
+        </div>
+      </main>
+
+      <div
+        class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
+      >
+        <div class="flex-1 flex justify-between sm:hidden">
+          <button
+            type="button"
+            class="prev-btn-mb relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            class="next-btn-mb ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+          >
+            Next
+          </button>
+        </div>
+        <div
+          class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
+        >
+          <div class="showing-numbers"></div>
+          <div>
+            <nav
+              class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+              aria-label="Pagination"
+            >
+              <button
+                type="button"
+                class="prev-btn relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+              >
+                <span class="sr-only">Previous</span>
+                <!-- Heroicon name: solid/chevron-left -->
+                <svg
+                  class="h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              <div class="paginate-btn"></div>
+
+              <button
+                type="button"
+                class="page-numbers relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                1
+              </button>
+              <button
+                type="button"
+                class="next-btn relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+              >
+                <span class="sr-only">Next</span>
+                <!-- Heroicon name: solid/chevron-right -->
+                <svg
+                  class="h-5 w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <footer class="py-16 bg-white border-t border-stone-200">
+        <div class="px-8 max-w-7xl mx-auto">
+          <div class="grid grid-cols-3">
+            <div class="text-center">
+              <h2 class="text-sm font-bold text-stone-900">Company</h2>
+              <nav class="mt-6 grid gap-6 text-sm">
+                <a href="#">Join our Newsletter</a>
+                <a href="#">Advertise</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+              </nav>
+            </div>
+            <div class="text-center">
+              <h2 class="text-sm font-bold text-stone-900">Social</h2>
+              <nav class="mt-6 grid gap-6 text-sm">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+              </nav>
+            </div>
+            <div class="text-center">
+              <h2 class="text-sm font-bold text-stone-900">Contact</h2>
+              <nav class="mt-6 grid gap-6 text-sm">
+                <a href="#">Email</a>
+                <a href="#">Phone</a>
+                <a href="#">Address</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="text-sm text-center mt-6 text-gray-500">
+            &copy; 2021. Copyright by Emmanuel Gbenga and Tope Leye.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

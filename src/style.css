@@ -1,0 +1,240 @@
+/* Main Styling */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.container {
+  margin: auto;
+}
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem /* 20px */;
+  margin-top: 1.25rem; /* 20px */
+  padding: 20px 10px;
+}
+
+.meal-img {
+  width: 100%;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.meal {
+  border-radius: 0.25rem /* 4px */;
+  overflow: hidden;
+
+  --tw-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
+  cursor: pointer;
+  position: relative;
+  height: 21rem /* 240px */;
+  width: 15rem /* 240px */;
+  text-align: left;
+}
+
+.title-likes {
+  display: flex;
+  justify-content: center;
+}
+
+.meal-title {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.comment-like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.meal-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0.5rem 12px;
+  background-color: rgb(238 242 255 / 1);
+  color: rgb(79 70 229 / 1);
+}
+
+.meal-btn:hover {
+  background-color: rgb(199 210 254 / 1);
+}
+
+.meal-svg {
+  overflow: visible;
+  margin-left: 0.75rem /* 12px */;
+  color: rgb(165 180 252 / 1);
+}
+
+.meal-svg:hover {
+  color: rgb(129 140 248 / 1);
+}
+
+@media (min-width: 475px) {
+  .meals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .meal {
+    height: 19rem /* 224px */;
+    width: 13rem /* 208px */;
+  }
+}
+
+@media (min-width: 640px) {
+  .meals {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .meal {
+    height: 19rem /* 224px */;
+    width: 13rem /* 208px */;
+  }
+}
+
+@media (min-width: 1280px) {
+  .meals {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Modals */
+
+/* meal details */
+.meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: #374151;
+  background: #d1d5db;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  width: 90%;
+  height: 90%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem 0;
+}
+
+.meal-details::-webkit-scrollbar {
+  width: 10px;
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+  background: #f0f0f0;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.meal-details.showRecipe {
+  display: block;
+}
+
+.single-meal-p {
+  margin: auto;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+  max-width: 56rem /* 896px */;
+}
+
+.single-meal-ul {
+  padding-left: 0;
+}
+
+.single-meal-ul-li {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(229, 231, 235, 1);
+  border-radius: 0.25rem /* 4px */;
+  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(17, 24, 39, 1);
+  display: inline-block;
+  color: rgba(17, 24, 39, 1);
+  color: rgba(229, 231, 235, 1);
+  font-size: 0.75rem /* 12px */;
+  line-height: 1rem /* 16px */;
+  font-weight: 700;
+  padding: 0.25rem /* 4px */;
+  margin-top: 0;
+  margin-right: 0.25rem /* 4px */;
+  margin-bottom: 0.25rem /* 4px */;
+  margin-left: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="text"],
+textarea {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  border: 2px solid #3741518a;
+}
+
+form input[type="submit"] {
+  background: #374151;
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.comment-count-header {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.comment-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.comment-display {
+  margin-bottom: 50px;
+}
+
+.comment-display li {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-left: 20px;
+}
