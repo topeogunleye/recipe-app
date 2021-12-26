@@ -76,11 +76,11 @@ export const handlePageBtn = (page) => {
   indexOfLastPost = currentPage * postsPerPage;
   indexOfFirstPost = indexOfLastPost - postsPerPage;
   getCurrentPosts();
-}
+};
 
-const paginate = (meals) => {
+export const paginate = (meals) => {
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(meals.length / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(meals.length / postsPerPage); i += 1) {
     pageNumbers.push(i);
   }
   const page = document.querySelector('.page');
@@ -94,4 +94,4 @@ const paginate = (meals) => {
     ul.appendChild(li);
   });
   page.appendChild(ul);
-}
+};
