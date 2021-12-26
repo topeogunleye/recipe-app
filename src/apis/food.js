@@ -77,3 +77,21 @@ export const handlePageBtn = (page) => {
   indexOfFirstPost = indexOfLastPost - postsPerPage;
   getCurrentPosts();
 }
+
+const paginate = (meals) => {
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(meals.length / postsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+  const page = document.querySelector('.page');
+  const ul = document.createElement('ul');
+  pageNumbers.forEach((number) => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#';
+    a.textContent = number;
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  page.appendChild(ul);
+}
