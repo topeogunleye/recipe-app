@@ -70,3 +70,10 @@ export const handleNextBtn = () => {
   indexOfFirstPost = indexOfLastPost - postsPerPage;
   getCurrentPosts();
 };
+
+export const handlePageBtn = (page) => {
+  currentPage = page;
+  indexOfLastPost = currentPage * postsPerPage;
+  indexOfFirstPost = indexOfLastPost - postsPerPage;
+  getCurrentPosts();
+}
