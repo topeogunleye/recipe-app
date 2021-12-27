@@ -46,11 +46,11 @@ const searchMeal = async (e) => {
 // Get Default Meals
 const getDefaultMeals = () => {
   if (defaultFood()) {
-    console.log(defaultFood())
     defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
   } else  if (searchFood(term)) {
     template(searchFood(term), mealsEl, resultHeading);
   }
+
 }
 
 // Event listeners

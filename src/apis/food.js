@@ -28,7 +28,6 @@ const getMealsLength = (meals, currentPosts) => {
 export const getCurrentPosts = async () => {
   currentPosts = meals.slice(indexOfFirstPost, indexOfLastPost);
   getMealsLength(meals, currentPosts)
-  console.log(currentPosts)
   return currentPosts;
 };
 
