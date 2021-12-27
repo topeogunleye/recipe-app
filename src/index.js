@@ -2,7 +2,7 @@ import './base.css';
 import './style.css';
 import logo from './yummly.svg';
 import { getLike } from './apis/likes.js';
-import { defaultFood, searchFood } from './apis/food.js';
+import { getCurrentPosts, defaultFood, searchFood, handleNextBtn, handlePrevBtn } from './apis/food.js';
 import template from './template.js';
 import defaultTemplate from './defaultTemplate.js';
 import modalPopUp from './modal/index.js';
@@ -16,13 +16,17 @@ const mealsEl = document.getElementById('meals');
 const resultHeading = document.getElementById('result-heading');
 const modal = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
+const pageItem = document.querySelectorAll('.page-item');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+let term = search.value;
 
 // Search meal and fetch data
 const searchMeal = async (e) => {
   e.preventDefault();
 
   // Get search term
-  const term = search.value;
+  term = search.value;
   if (term.trim() === '') return;
   resultHeading.innerHTML = `<h2>Search results for '${term}'</h2>`;
   mealsEl.innerHTML = '<p class="text-center">Loading...</p>';
@@ -30,10 +34,24 @@ const searchMeal = async (e) => {
   template(searchFood(term), mealsEl, resultHeading);
 };
 
-// Get Default meals
+// // Get Default meals
+// const getDefaultMeals = () => {
+//   defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+//   // if handleNextBtn is called, get defaultFood
+//   if (handleNextBtn) {
+//     defaultTemplate(getCurrentPosts(), mealsEl, getLike(), resultHeading);
+//   }
+// };
+
+// Get Default Meals
 const getDefaultMeals = () => {
-  defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
-};
+  if (defaultFood()) {
+    console.log(defaultFood())
+    defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+  } else  if (searchFood(term)) {
+    template(searchFood(term), mealsEl, resultHeading);
+  }
+}
 
 // Event listeners
 submit.addEventListener('submit', searchMeal);
@@ -51,15 +69,27 @@ mealsEl.addEventListener('click', (e) => {
 
   if (mealInfo) {
     const mealID = mealInfo.getAttribute('data-mealid');
-    defaultFood().then((data) => {
+    getCurrentPosts().then((data) => {
       const meal = data.find((meal) => meal.idMeal === mealID);
       modalPopUp(modal, meal);
     });
   }
 });
 
+
 recipeCloseBtn.addEventListener('click', () => {
   modal.parentElement.classList.remove('showRecipe');
 });
 
 getLike();
+
+prevBtn.addEventListener('click', ()=> {
+  handlePrevBtn()
+})
+
+nextBtn.addEventListener('click', ()=> {
+  handleNextBtn();
+})
+
+
+
