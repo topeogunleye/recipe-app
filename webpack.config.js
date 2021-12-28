@@ -20,12 +20,12 @@ module.exports = {
           content:
             'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         },
-        keyword: { name: 'keywords', content: '...' },
+        keyword: { name: 'keywords', content: 'yummy, recipe, app' },
         'og:title': { property: 'og:title', content: 'Recipa | MealDB App' },
         'og:description': {
           property: 'og:description',
           content:
-            'Meal Finder App for users to get Meal Recipes Recommendation, Recipe Instructions and Ingredients or Get random recipes.',
+            'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         },
         'og:type': { property: 'og:type', content: 'website' },
         'og:url': {
@@ -48,7 +48,7 @@ module.exports = {
         'twitter:description': {
           name: 'twitter:description',
           content:
-            'Meal Finder App for users to get Meal Recipes Recommendation, Recipe Instructions and Ingredients or Get random recipes.',
+            'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         },
         'twitter:image': { name: 'twitter:image', content: './src/og.png' },
       },
