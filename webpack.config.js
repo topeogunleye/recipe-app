@@ -15,7 +15,7 @@ module.exports = {
       title: 'Output Management',
       template: './src/index.html',
       meta: {
-        'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
         'theme-color': '#F5F5F5',
         description: {
           name: 'description',
@@ -23,7 +23,7 @@ module.exports = {
             'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         },
         keyword: { name: 'keywords', content: 'yummy, recipe, app' },
-        'og:title': { property: 'og:title', content: 'Recipa | MealDB App' },
+        'og:title': { property: 'og:title', content: 'Yummy | Recipe Finder' },
         'og:description': {
           property: 'og:description',
           content:
@@ -45,7 +45,7 @@ module.exports = {
         },
         'twitter:title': {
           name: 'twitter:title',
-          content: 'Recipa | MealDB App',
+          content: 'Yummy | Recipe Finder',
         },
         'twitter:description': {
           name: 'twitter:description',
@@ -61,7 +61,8 @@ module.exports = {
       devMode: 'webapp', // optional can be 'webapp' or 'light' - 'light' by default
       favicons: {
         appName: 'Yummy',
-        appDescription: 'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
+        appDescription:
+          'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         developerName: 'Tope Leye',
         developerURL: 'https://topeloba.netlify.app/', // prevent retrieving from the nearest package.json
         background: '#ddd',
@@ -72,7 +73,6 @@ module.exports = {
         },
       },
     }),
-
   ],
   output: {
     filename: '[name].bundle.js',
