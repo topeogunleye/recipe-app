@@ -58,7 +58,7 @@ module.exports = {
       mode: 'webapp', // optional can be 'webapp', 'light' or 'auto' - 'auto' by default
       devMode: 'webapp', // optional can be 'webapp' or 'light' - 'light' by default
       favicons: {
-        appName: 'recipe-app',
+        appName: 'Yummy',
         appDescription: 'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         developerName: 'Tope Leye',
         developerURL: 'https://topeloba.netlify.app/', // prevent retrieving from the nearest package.json
