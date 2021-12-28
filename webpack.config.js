@@ -15,6 +15,8 @@ module.exports = {
       title: 'Output Management',
       template: './src/index.html',
       meta: {
+        'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        'theme-color': '#F5F5F5',
         description: {
           name: 'description',
           content:
