@@ -2,7 +2,14 @@ import './base.css';
 import './style.css';
 import logo from './yummly.svg';
 import { getLike } from './apis/likes.js';
-import { getCurrentPosts, defaultFood, searchFood, handleNextBtn, handlePrevBtn } from './apis/food.js';
+import {
+  getCurrentPosts,
+  defaultFood,
+  searchFood,
+  handleNextBtn,
+  handlePrevBtn,
+  handlePageBtn,
+} from './apis/food.js';
 import template from './template.js';
 import defaultTemplate from './defaultTemplate.js';
 import modalPopUp from './modal/index.js';
@@ -16,10 +23,10 @@ const mealsEl = document.getElementById('meals');
 const resultHeading = document.getElementById('result-heading');
 const modal = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
-const pageItem = document.querySelectorAll('.page-item');
 const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 let term = search.value;
+const postsPerPage = 10;
 
 // Search meal and fetch data
 const searchMeal = async (e) => {
@@ -34,24 +41,14 @@ const searchMeal = async (e) => {
   template(searchFood(term), mealsEl, resultHeading);
 };
 
-// // Get Default meals
-// const getDefaultMeals = () => {
-//   defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
-//   // if handleNextBtn is called, get defaultFood
-//   if (handleNextBtn) {
-//     defaultTemplate(getCurrentPosts(), mealsEl, getLike(), resultHeading);
-//   }
-// };
-
 // Get Default Meals
 const getDefaultMeals = () => {
   if (defaultFood()) {
     defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
-  } else  if (searchFood(term)) {
+  } else if (searchFood(term)) {
     template(searchFood(term), mealsEl, resultHeading);
   }
-
-}
+};
 
 // Event listeners
 submit.addEventListener('submit', searchMeal);
@@ -76,20 +73,57 @@ mealsEl.addEventListener('click', (e) => {
   }
 });
 
-
 recipeCloseBtn.addEventListener('click', () => {
   modal.parentElement.classList.remove('showRecipe');
 });
 
 getLike();
 
-prevBtn.addEventListener('click', ()=> {
-  handlePrevBtn()
-})
+prevBtn.addEventListener('click', () => {
+  handlePrevBtn();
+  if (searchFood(term)) {
+    template(searchFood(term), mealsEl, resultHeading);
+  } else if (defaultFood()) {
+    defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+  }
+});
 
-nextBtn.addEventListener('click', ()=> {
+nextBtn.addEventListener('click', () => {
   handleNextBtn();
-})
+  if (searchFood(term)) {
+    template(searchFood(term), mealsEl, resultHeading);
+  } else if (defaultFood()) {
+    defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+  }
+});
 
+export const paginate = (meals, currentPage) => {
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(meals.length / postsPerPage); i += 1) {
+    pageNumbers.push(i);
+  }
+  const page = document.querySelector('.page');
+  page.innerHTML = '';
+  const ul = document.createElement('ul');
+  ul.classList.add('inline-flex');
+  pageNumbers.forEach((number) => {
+    const li = document.createElement('li');
+    li.classList.add('page-item');
+    if (number === currentPage) {
+      li.classList.add('active');
+    }
+    li.innerHTML = `<a class="page-link bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium" href="#">${number}</a>`;
+    li.addEventListener('click', (e) => {
+      e.preventDefault();
+      handlePageBtn(number);
+      if (searchFood(term)) {
+        template(searchFood(term), mealsEl, resultHeading);
+      } else if (defaultFood()) {
+        defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+      }
+    });
 
-
+    ul.appendChild(li);
+  });
+  page.appendChild(ul);
+};
