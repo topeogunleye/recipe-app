@@ -64,7 +64,7 @@ module.exports = {
         appDescription:
           'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         developerName: 'Tope Leye',
-        developerURL: 'https://topeloba.netlify.app/', // prevent retrieving from the nearest package.json
+        developerURL: 'https://recipeappmicroverse.netlify.app/', // prevent retrieving from the nearest package.json
         background: '#ddd',
         theme_color: '#333',
         icons: {
