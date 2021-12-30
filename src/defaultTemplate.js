@@ -1,4 +1,4 @@
-import { getMealsLength } from "./apis/food";
+import { getMealsLength } from './apis/food';
 
 export default async (defaultFood, mealsEl, getLike, resultHeading) => {
   const meals = await defaultFood;
@@ -18,10 +18,10 @@ export default async (defaultFood, mealsEl, getLike, resultHeading) => {
         <div class="m-4 meal-info">
         <div class="title-likes">
           <span class="font-bold meal-title">${
-  meal.strMeal.length > 14
-    ? `${meal.strMeal.slice(0, 14)}...`
-    : meal.strMeal
-} </span>
+            meal.strMeal.length > 14
+              ? `${meal.strMeal.slice(0, 14)}...`
+              : meal.strMeal
+          } </span>
  
     
       <span class="likes" like-id =${index}>
@@ -31,8 +31,8 @@ export default async (defaultFood, mealsEl, getLike, resultHeading) => {
         </div>
         <div class="comment-like">
           <button class="meal-btn" data-mealID="${
-  meal.idMeal
-}">Comments<svg class="meal-svg" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M0 0L3 3L0 6"></path></svg>
+            meal.idMeal
+          }">Comments<svg class="meal-svg" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M0 0L3 3L0 6"></path></svg>
           </button>
           <i class="fas fa-heart" id=${index}></i>
   
@@ -40,10 +40,10 @@ export default async (defaultFood, mealsEl, getLike, resultHeading) => {
       </div>
       </div>
   
-      `,
+      `
       )
       .join('');
-      getMealsLength()
+    getMealsLength();
   }
 
   const hearts = document.querySelectorAll('.fa-heart');
@@ -63,7 +63,7 @@ export default async (defaultFood, mealsEl, getLike, resultHeading) => {
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
-        },
+        }
       );
 
       const response = await fetch(
@@ -74,7 +74,7 @@ export default async (defaultFood, mealsEl, getLike, resultHeading) => {
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
           },
-        },
+        }
       );
 
       const json = await response.json();
