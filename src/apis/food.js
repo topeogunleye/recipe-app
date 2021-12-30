@@ -18,7 +18,9 @@ export const getMealsLength = () => {
   Showing
   <span class="font-medium">${indexOfFirstPost + 1}</span>
   to
-  <span class="font-medium">${currentPosts.length >= 10 ? indexOfLastPost : totalMeals}</span>
+  <span class="font-medium">${
+    currentPosts.length >= 10 ? indexOfLastPost : totalMeals
+  }</span>
   of
   <span class="font-medium">${totalMeals}</span>
   meals
@@ -33,7 +35,7 @@ export const getCurrentPosts = async () => {
 
 export const searchFood = async (term) => {
   const response = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`,
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`
   );
   const data = await response.json();
   meals = data.meals;
@@ -43,7 +45,7 @@ export const searchFood = async (term) => {
 
 export const defaultFood = async () => {
   const response = await fetch(
-    'https://www.themealdb.com/api/json/v1/1/search.php?s=',
+    'https://www.themealdb.com/api/json/v1/1/search.php?s='
   );
   const data = await response.json();
   meals = data.meals;
