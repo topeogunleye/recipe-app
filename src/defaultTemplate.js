@@ -1,3 +1,5 @@
+import { getMealsLength } from "./apis/food";
+
 export default async (defaultFood, mealsEl, getLike, resultHeading) => {
   const meals = await defaultFood;
 
@@ -41,6 +43,7 @@ export default async (defaultFood, mealsEl, getLike, resultHeading) => {
       `,
       )
       .join('');
+      getMealsLength()
   }
 
   const hearts = document.querySelectorAll('.fa-heart');
