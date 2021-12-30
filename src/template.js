@@ -1,3 +1,5 @@
+import { getMealsLength } from "./apis/food";
+
 export default async (searchFood, mealsEl, resultHeading) => {
   // Change HTML
   searchFood.then((meals) => {
@@ -36,6 +38,7 @@ export default async (searchFood, mealsEl, resultHeading) => {
             `,
         )
         .join('');
+      getMealsLength();
     }
   });
 };
