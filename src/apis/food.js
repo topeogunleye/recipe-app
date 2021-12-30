@@ -12,7 +12,7 @@ const showingNumbers = document.querySelector('.showing-numbers');
 const mealsCounter = document.getElementById('meals-counter');
 
 // Get length of meals
-const getMealsLength = (meals, currentPosts) => {
+export const getMealsLength = () => {
   const totalMeals = meals.length;
   showingNumbers.innerHTML = `  <p class="text-sm text-gray-700">
   Showing
@@ -37,10 +37,8 @@ export const searchFood = async (term) => {
   );
   const data = await response.json();
   meals = data.meals;
-  getMealsLength(meals, currentPosts);
-  currentPosts = getCurrentPosts();
   paginate(meals, currentPage);
-  return currentPosts;
+  return getCurrentPosts();
 };
 
 export const defaultFood = async () => {
@@ -49,8 +47,6 @@ export const defaultFood = async () => {
   );
   const data = await response.json();
   meals = data.meals;
-  currentPosts = getCurrentPosts();
-  getMealsLength(meals, currentPosts);
   paginate(meals, currentPage);
   return getCurrentPosts();
 };
@@ -62,7 +58,6 @@ export const handlePrevBtn = () => {
   indexOfLastPost = currentPage * postsPerPage;
   indexOfFirstPost = indexOfLastPost - postsPerPage;
   getCurrentPosts();
-  getMealsLength(meals, currentPosts);
 };
 
 export const handleNextBtn = () => {
@@ -73,7 +68,6 @@ export const handleNextBtn = () => {
   indexOfLastPost = currentPage * postsPerPage;
   indexOfFirstPost = indexOfLastPost - postsPerPage;
   getCurrentPosts();
-  getMealsLength(meals, currentPosts);
 };
 
 export const handlePageBtn = (page) => {
@@ -81,5 +75,4 @@ export const handlePageBtn = (page) => {
   indexOfLastPost = currentPage * postsPerPage;
   indexOfFirstPost = indexOfLastPost - postsPerPage;
   getCurrentPosts();
-  getMealsLength(meals, currentPosts);
 };
