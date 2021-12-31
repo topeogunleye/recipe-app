@@ -23,8 +23,8 @@ const mealsEl = document.getElementById('meals');
 const resultHeading = document.getElementById('result-heading');
 const modal = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelectorAll('.next-btn');
+const prevBtn = document.querySelectorAll('.prev-btn');
 let term = search.value;
 const postsPerPage = 10;
 
@@ -79,22 +79,26 @@ recipeCloseBtn.addEventListener('click', () => {
 
 getLike();
 
-prevBtn.addEventListener('click', () => {
-  handlePrevBtn();
-  if (searchFood(term)) {
-    template(searchFood(term), mealsEl, resultHeading);
-  } else if (defaultFood()) {
-    defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
-  }
+prevBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    handlePrevBtn();
+    if (searchFood(term)) {
+      template(searchFood(term), mealsEl, resultHeading);
+    } else if (defaultFood()) {
+      defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+    }
+  });
 });
 
-nextBtn.addEventListener('click', () => {
-  handleNextBtn();
-  if (searchFood(term)) {
-    template(searchFood(term), mealsEl, resultHeading);
-  } else if (defaultFood()) {
-    defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
-  }
+nextBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    handleNextBtn();
+    if (searchFood(term)) {
+      template(searchFood(term), mealsEl, resultHeading);
+    } else if (defaultFood()) {
+      defaultTemplate(defaultFood(), mealsEl, getLike(), resultHeading);
+    }
+  });
 });
 
 export const paginate = (meals, currentPage) => {
