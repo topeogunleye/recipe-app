@@ -93,7 +93,7 @@ export default async (modal, meal) => {
       <h2 class="comment-header">Add Comment</h2>
       <form>
       <input type="text" class="username" placeholder = "Your name" required/>
-      <textarea placeholder="Your sight" class="comment" required></textarea>
+      <textarea placeholder="Your comment" class="comment" required></textarea>
       <input type="submit" class="submitBtn" value="Comment" />
    </form>
      
