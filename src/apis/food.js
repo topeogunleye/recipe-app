@@ -1,4 +1,5 @@
-import { paginate } from '../index.js';
+/* eslint-disable import/no-cycle */
+import paginate from '../index.js';
 
 let meals = [];
 let currentPosts = [];

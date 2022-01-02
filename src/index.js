@@ -2,6 +2,7 @@ import './base.css';
 import './style.css';
 import logo from './yummly.svg';
 import { getLike } from './apis/likes.js';
+/* eslint-disable import/no-cycle */
 import {
   getCurrentPosts,
   defaultFood,
@@ -101,7 +102,7 @@ nextBtn.forEach((btn) => {
   });
 });
 
-export const paginate = (meals, currentPage) => {
+export default (meals, currentPage) => {
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(meals.length / postsPerPage); i += 1) {
     pageNumbers.push(i);

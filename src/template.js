@@ -1,4 +1,5 @@
-import { getMealsLength } from './apis/food';
+/* eslint-disable import/no-cycle */
+import { getMealsLength } from './apis/food.js';
 
 export default async (searchFood, mealsEl, resultHeading) => {
   // Change HTML
