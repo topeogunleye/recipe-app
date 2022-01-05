@@ -79,6 +79,10 @@ main {
   background-color: rgb(199 210 254 / 1);
 }
 
+.fas.fa-heart {
+  cursor: pointer;
+}
+
 .meal-svg {
   overflow: visible;
   margin-left: 0.75rem /* 12px */;
