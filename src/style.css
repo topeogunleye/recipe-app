@@ -39,7 +39,6 @@ main {
     var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow);
-  cursor: pointer;
   position: relative;
   height: 21rem /* 240px */;
   width: 15rem /* 240px */;
