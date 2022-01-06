@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+import og from './src/images/og.png'
 
 module.exports = {
   entry: {
@@ -34,7 +35,7 @@ module.exports = {
           property: 'og:url',
           content: 'https://recipeappmicroverse.netlify.app/',
         },
-        'og:image': { property: 'og:image', content: '/og.png' },
+        'og:image': { property: 'og:image', content: og },
         'twitter:card': {
           name: 'twitter:card',
           content: 'summary_large_image',
@@ -52,7 +53,7 @@ module.exports = {
           content:
             'Find your favourite recipes including instructions and ingredients used to make them, bookmark recipes and also add your own recipes.',
         },
-        'twitter:image': { name: 'twitter:image', content: '/og.png' },
+        'twitter:image': { name: 'twitter:image', content: og },
       },
     }),
     new FaviconsWebpackPlugin({
