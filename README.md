@@ -79,13 +79,13 @@ The following tools help make easier to work with sample code.
 
 ## Authors
 
-👤 **Author1**
+👤 **Temitope Ogunleye**
 
 - GitHub: [@githubhandle](https://github.com/topeogunleye)
 - Twitter: [@twitterhandle](https://twitter.com/topeogunleye21)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ogunleye)
 
-👤 **Author2**
+👤 **Gbenga Emmanuel**
 
 - GitHub: [@githubhandle](https://github.com/gbengacode)
 ## 🤝 Contributing
