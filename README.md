@@ -2,10 +2,6 @@
 A meal finder app that pulls from TheMealDB API to allow users to search for, view recipes, and comment on recipes.
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# recipe-app
-
-> A meal finder app that pulls from TheMealDB API to allow users to search for, view recipes, and comment on recipes.
-
 ![screenshot](./sec.png)
 
 Additional description about the project and its features.
