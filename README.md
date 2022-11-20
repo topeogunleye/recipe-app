@@ -1,79 +1,141 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# recipe-app
-> A meal finder app that pulls from TheMealDB API to allow users to search for, view recipes, and comment on recipes.
+<div align="center">
 
-![screenshot](./src/images/recipa-microverse-demo.gif)
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
+  <h3><b>Microverse README Template</b></h3>
 
-## Built With
+</div>
 
-- HTML, JavaScript
-- Stylelint, Web Hint, Lighthouse
-- Eslint, Prettier
+# 📗 Table of Contents
 
-## Video Demo
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-[Video Demo](https://www.loom.com/share/86a73ca9798443a2af325321d206d7ab)
-## Live Demo
+# 📖 [recipe-app] <a name="about-project"></a>
 
-[Live Demo Link](https://recipeappmicroverse.netlify.app/)
+**[recipe-app]** is a meal finder app that pulls from TheMealDB API to allow users to search for, view recipes, and comment on recipes.
 
-## Getting Started
-To get a local copy up and running, follow the steps in Setup below.
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/](https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://webpack.js.org/guides/getting-started/">Webpack</a></li>
+    <li><a href="https://tailwindcss.com/"></a></li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+
+> Describe between 1-3 key features of the application.
+
+- **[Fetch_API]**
+- **[Modals]**
+- **[Pagination]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://recipeappmicroverse.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
-Basic knowledge of HTML, CSS, and JavaScript.
 
+In order to run this project you need:
+
+1. Create React App
+
+   ```sh
+   npm i create-react-app
+   ```
+   
 ### Setup
-If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 
-[Download the ZIP from this location](https://github.com/topeogunleye/recipe-app/archive/refs/heads/main.zip), or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
+Clone this repository to your desired folder:
 
-```bash
-git clone https://github.com/topeogunleye/recipe-app.git
+<!--
+Example commands:
+
+```sh
+  cd my-folder
+  git clone git@github.com:topeogunleye/recipe-app.git
 ```
+--->
 
-- Once the files are on your machine, open the _todo-list_ folder in [Visual Studio Code](https://code.visualstudio.com/), and follow the steps in Installation & Set Up
+### Install
 
-## 🛠 Installation & Set Up
+Install this project with:
 
-1. Install Node Modules
+
+- Install Node Modules
 
    ```sh
    npm install
    ```
 
-2. Start the development server
+### Usage
+
+To run the project, execute the following command:
+
+
+- Start the development server
 
    ```sh
    npm start
    ```
 
-3. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+### Run tests
 
-## 🚀 Building and Running for Production
+To run tests, run the following command:
 
-1. Generate a full static production build
-
-   ```sh
-   npm run build
-   ```
-4. ## 🚀 Testing Application
-
-1. Test the items Counter and Comments Counter function
+- Test the items Counter and Comments Counter function
 
    ```sh
    npm test
-### Install
 
-The following tools help make easier to work with sample code.
+### Deployment
 
-- [git](https://git-scm.com/downloads): A tool for managing source code
-- [Visual Studio Code](https://code.visualstudio.com/): A source code editor
-- [NVM](https://github.com/nvm-sh/nvm)
+You can deploy this project using:
 
-## Authors
+
+```sh
+npm run deploy
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Temitope Ogunleye**
 
@@ -84,17 +146,50 @@ The following tools help make easier to work with sample code.
 👤 **Gbenga Emmanuel**
 
 - GitHub: [@gbengacode](https://github.com/gbengacode)
-## 🤝 Contributing
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[animations]**
+- [ ] **[deployment]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/topeogunleye/recipe-app/issues).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+## ⭐️ Show your support <a name="support"></a>
 
+If you like this project, kindly star it
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank the creators of [yummly](https://www.yummly.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ❓ FAQ <a name="faq"></a>
+
+- **[What inspired you to build this website]**
+
+  - [I love food]
+
+- **[What is your favorite food]**
+
+  - [Beans and Potatoes]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
