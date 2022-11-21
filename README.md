@@ -72,10 +72,10 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-1. Create React App
+- Create React App
 
    ```sh
-   npm i create-react-app
+   npm install webpack
    ```
    
 ### Setup
