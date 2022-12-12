@@ -174,7 +174,7 @@ I would like to thank the creators of [yummly](https://www.yummly.com/)
 
 - **[What inspired you to build this website]**
 
-  - [I love food]
+  - [I learnt how to build a recipe website from Brad traversy's 20 Web Projects With Vanilla JavaScript Course ]
 
 - **[What is your favorite food]**
 
